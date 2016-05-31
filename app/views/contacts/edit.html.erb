@@ -69,7 +69,7 @@
           Event
         </label>
 
-        <input type="text" id="event_id" name="event_id" placeholder="Event" class="form-control" value="<%= @contact.event_id %>">
+        <%= select_tag(:event_id, options_from_collection_for_select(current_user.events, :id, :title, @contact.event_id), :class => "form-control") %>
       </div>
 
 
