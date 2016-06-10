@@ -40,7 +40,11 @@
   </div>
 </div>
 
-<ul>
+<div class="page-header">
+  <h3>Add Contact</h3>
+</div>
+
+<ul class="unstyled">
 
   <% Contact.where(:event_id => @event.id).each do |contact| %>
   <li><a href="/contacts/<%= contact.id %>"><%= contact.name %></a></li>
@@ -60,7 +64,7 @@
           Name
         </label>
 
-        <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @contact.name %>">
+        <input type="text" id="name" name="name" class="form-control" value="<%= @contact.name %>">
       </div>
 
       <!-- Label and input for company -->
@@ -69,7 +73,7 @@
           Company
         </label>
 
-        <input type="text" id="company" name="company" placeholder="Company" class="form-control" value="<%= @contact.company %>">
+        <input type="text" id="company" name="company" class="form-control" value="<%= @contact.company %>">
       </div>
 
       <!-- Label and input for job_title -->
@@ -78,7 +82,7 @@
           Job title
         </label>
 
-        <input type="text" id="job_title" name="job_title" placeholder="Job title" class="form-control" value="<%= @contact.job_title %>">
+        <input type="text" id="job_title" name="job_title" class="form-control" value="<%= @contact.job_title %>">
       </div>
 
       <!-- Label and input for email -->
@@ -87,7 +91,7 @@
           Email
         </label>
 
-        <textarea id="email" name="email" placeholder="Email" class="form-control" rows="3"><%= @contact.email %></textarea>
+        <input type="text" id="email" name="email" placeholder="first.last@company.com" class="form-control" rows="3" value="<%= @contact.email %>">
       </div>
 
       <!-- Label and input for phone_number -->
@@ -96,7 +100,7 @@
           Phone number
         </label>
 
-        <input type="text" id="phone_number" name="phone_number" placeholder="Phone number" class="form-control" value="<%= @contact.phone_number %>">
+        <input type="text" id="phone_number" name="phone_number" placeholder="555-555-5555" class="form-control" value="<%= @contact.phone_number %>">
       </div>
 
       <!-- Label and input for event_id -->

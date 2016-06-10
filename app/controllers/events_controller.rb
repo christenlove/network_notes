@@ -19,7 +19,7 @@ class EventsController < ApplicationController
     @event.notes = params[:notes]
     @event.location = params[:location]
     @event.description = params[:description]
-    @event.held_on = params[:held_on]
+    @event.held_on = Chronic.parse(params[:held_on])
     @event.title = params[:title]
 
     if @event.save

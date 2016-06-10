@@ -51,7 +51,7 @@
           Email
         </label>
 
-        <textarea id="email" name="email" placeholder="Email" class="form-control" rows="3"><%= @contact.email %></textarea>
+        <input id="email" name="email" placeholder="Email" class="form-control" rows="3" value="<%= @contact.email %>">
       </div>
 
       <!-- Label and input for phone_number -->
@@ -60,7 +60,7 @@
           Phone number
         </label>
 
-        <input type="text" id="phone_number" name="phone_number" placeholder="Phone number" class="form-control" value="<%= @contact.phone_number %>">
+        <input type="text" id="phone_number" name="phone_number" placeholder="555-555-5555" class="form-control" value="<%= @contact.phone_number %>">
       </div>
 
       <!-- Label and input for event_id -->
