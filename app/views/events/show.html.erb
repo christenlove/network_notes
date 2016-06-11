@@ -40,17 +40,19 @@
   </div>
 </div>
 
-<div class="page-header">
-  <h3>Add Contact</h3>
-</div>
 
-<ul class="unstyled">
+<ul>
 
   <% Contact.where(:event_id => @event.id).each do |contact| %>
   <li><a href="/contacts/<%= contact.id %>"><%= contact.name %></a></li>
   <% end %>
 
 </ul>
+
+<div class="page-header">
+  <h3>Add Contact</h3>
+</div>
+
 
 <div class="row">
   <div class="col-md-12">
